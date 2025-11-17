@@ -1,15 +1,27 @@
 package steps;
 
+import core.Driver;
+import io.cucumber.java.Before;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import pages.EcomercePage;
 
 public class EcomerceSteps {
 
+    private EcomercePage ecomercePage;
+
+    @Before
+    public void inicializaTeste(){
+
+        Driver.inicializaNavegador();
+    }
+
     @Dado("que a pagina inicial esteja sendo exibida")
     public void queAPaginaInicialEstejaSendoExibida() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        Driver.getDriver().get("https://shop.polymer-project.org/");
+        ecomercePage= new EcomercePage();
     }
 
     @Quando("for feito um clique no botao mens outerwear")
