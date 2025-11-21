@@ -5,11 +5,13 @@ import io.cucumber.java.Before;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import maps.EcomerceMaps;
 import pages.EcomercePage;
 
 public class EcomerceSteps {
 
     private EcomercePage ecomercePage;
+    private EcomerceMaps ecomerceMaps;
 
     @Before
     public void inicializaTeste(){
@@ -26,8 +28,10 @@ public class EcomerceSteps {
 
     @Quando("for feito um clique no botao mens outerwear")
     public void forFeitoUmCliqueNoBotaoMensOuterwear() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnMensOuterwear);
+
+
     }
 
     @Quando("for feito um clique em uma peca de roupa")
@@ -38,14 +42,14 @@ public class EcomerceSteps {
 
     @Quando("for feito um clique no botao add to cart")
     public void forFeitoUmCliqueNoBotaoAddToCart() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnAddtocart);
     }
 
     @Quando("for feito um clique no botao checkout")
     public void forFeitoUmCliqueNoBotaoCheckout() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnCheckout);
     }
 
     @Quando("os dados forem preenchidos da seguinte forma")
@@ -62,8 +66,8 @@ public class EcomerceSteps {
 
     @Quando("for feito um clique no botao place order")
     public void forFeitoUmCliqueNoBotaoPlaceOrder() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnformPlaceOrder);
     }
 
     @Entao("valide a mensagem de finalizacao do checkout")
@@ -75,29 +79,27 @@ public class EcomerceSteps {
 
     @Quando("for feito um clique no botao ladies outerwear")
     public void forFeitoUmCliqueNoBotaoLadiesOuterwear() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnLadiesOuterwear);
     }
 
 
     @Quando("for feito um clique no botao mens t shirts")
     public void forFeitoUmCliqueNoBotaoMensTShirts() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnMensTshirt);
     }
 
 
     @Quando("for feito um clique no botao ladies t shirts")
     public void forFeitoUmCliqueNoBotaoLadiesTShirts() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        ecomercePage.clicaBotao(ecomerceMaps.btnLadiesTshirt);
     }
 
 
     @Quando("for feito um clique no botao ladies tshirt")
     public void forFeitoUmCliqueNoBotaoLadiesTshirt() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        ecomercePage.clicaBotao(ecomerceMaps.btnLadiesTshirt);
     }
 
 
@@ -116,15 +118,14 @@ public class EcomerceSteps {
 
     @Quando("for feito um clique no botao mens tshirt")
     public void forFeitoUmCliqueNoBotaoMensTshirt() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        ecomercePage.clicaBotao(ecomerceMaps.btnMensTshirt);
     }
 
 
     @Quando("for feito um clique fora do campo email")
     public void forFeitoUmCliqueForaDoCampoEmail() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.formCity);
     }
 
     @Entao("valide a mensagem de invalid email")
@@ -136,8 +137,8 @@ public class EcomerceSteps {
 
     @Quando("for feito um clique na fora do campo card number")
     public void forFeitoUmCliqueNaForaDoCampoCardNumber() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.formCountry);
     }
 
     @Entao("valide a mensagem de invalid card number")
@@ -148,14 +149,14 @@ public class EcomerceSteps {
 
     @Quando("for feito um clique no botao view cart")
     public void forFeitoUmCliqueNoBotaoViewCart() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnViewCart);
     }
 
     @Quando("for feito um clique no botao excluir")
     public void forFeitoUmCliqueNoBotaoExcluir() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnDelete);
     }
 
     @Entao("valide a mensagem de your cart is empty")
@@ -166,7 +167,7 @@ public class EcomerceSteps {
 
     @Quando("for feito um clique no botao excluir da primeira peca")
     public void forFeitoUmCliqueNoBotaoExcluirDaPrimeiraPeca() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        ecomercePage.clicaBotao(ecomerceMaps.btnDelete);
     }
 }
